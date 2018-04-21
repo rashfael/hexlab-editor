@@ -1,0 +1,54 @@
+@import '_settings'
+variables()
+normalize-css()
+base()
+typography()
+components()
+text-selection($color: $clr-primary, $text-color: $clr-white)
+
+.bunt-select-dropdown-menu
+	z-index: 9000000
+
+a
+	color: $clr-primary
+	text-decoration: none
+
+html, body, #v-app
+	margin: 0
+	height: 100%
+	overflow: hidden
+
+body
+	background-color: $clr-grey-100
+
+#v-app
+	display: flex
+	flex-direction: column
+
+.list
+	display: flex
+	flex-direction: column
+	.thead, .tbody .item
+		display: flex
+		align-items: center
+		border-bottom: border-separator()
+		flex: 0 0
+		color: $clr-primary-text-light
+		> :first-child
+			padding-left: 32px
+		> :last-child
+			padding-right: 32px
+	.thead
+		height: 64px
+		font-weight: 600
+	.tbody
+		display: flex
+		flex-direction: column
+		position: relative
+
+		.item
+			height: 40px
+			cursor: pointer
+
+			&:hover
+				background-color $clr-grey-200
